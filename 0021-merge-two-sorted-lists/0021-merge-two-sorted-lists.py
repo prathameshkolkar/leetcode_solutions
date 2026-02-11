@@ -19,8 +19,5 @@ class Solution:
                 c.next=list2
                 list2=list2.next
             c=c.next
-        if list1 ==None:
-            c.next=list2
-        if list2 == None:
-            c.next=list1
+        c.next=list1 if list1 else list2
         return d.next
