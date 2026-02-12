@@ -19,6 +19,7 @@ class Solution:
             slow=slow.next
             fast=fast.next.next
         
+        # reverse the second half
         pre=None
         cur=slow
         while cur:
@@ -27,14 +28,12 @@ class Solution:
             pre=cur
             cur=temp
         com=pre
+        # comparing first half and reverse of second half
         while com:
             if head.val!=com.val:
                 return False
             head=head.next
             com=com.next
         return True
-        
-        
-
 
                     
